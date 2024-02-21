@@ -1,0 +1,13 @@
+{
+  "name": "file_manager",
+  "version": "1.0.0",
+  "description": "file_manager on Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
