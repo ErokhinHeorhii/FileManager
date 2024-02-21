@@ -1,11 +1,12 @@
 {
   "name": "file_manager",
   "version": "1.0.0",
-  "description": "file_manager on Node.js",
+  "description": "file_manager with Node.js",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "start:name": "node main.js --username=Geo"
   },
   "author": "",
   "license": "ISC"

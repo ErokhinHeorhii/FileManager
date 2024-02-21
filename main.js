@@ -1,1 +1,22 @@
-console.log("Hello")
+import readline from 'node:readline/promises';
+import {getUsername} from "./src/utils/getUsername.js";
+
+const startFileManagerApp = () => {
+// const rl = readline.createInterface({input: process.stdin, output: process.stdout});
+    const username = getUsername() || "SomeBody";
+    console.log(username)
+
+// console.log(`Welcome to the File Manager, ${username}`);
+// console.log(`You are currently in ${PathCache.getPath()}`)
+// PathCache.setUserName(username);
+//
+// rl.on('close',() => {
+//     console.log(`\nThank you for using File Manager, ${username}, goodbye!`)
+// });
+//
+// rl.on('line', async (input) => {
+//     await lineParser(input);
+//     console.log(`You are currently in ${PathCache.getPath()}`)
+// });
+}
+startFileManagerApp()
