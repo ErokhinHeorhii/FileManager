@@ -1,7 +1,6 @@
 import { homedir } from 'node:os';
 
 class PathClass {
-    username = "Geo"
     constructor(home) {
         this._path = home();
     }
@@ -11,5 +10,5 @@ class PathClass {
     getPath() {
         return this._path;
     }
-};
+}
 export const PathApp = new PathClass(homedir);
