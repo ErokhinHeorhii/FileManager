@@ -1,4 +1,5 @@
 export const parseInput = (str) => {
+
     const [command, ...rest] = str.split(' ');
     const path = [];
     let temp = '';
@@ -21,8 +22,9 @@ export const parseInput = (str) => {
     }
 
     const source = path.shift();
-
     return {
+        command,
         source,
-    };
+    }
+        ;
 };

@@ -1,18 +1,17 @@
 import {cd, ls, parseInput, up} from "../actions/index.js";
 
 export const parser = async (input) => {
-    const {path = ''} = parseInput(input.trim());
-
-    switch (input) {
+    let {command, source} = parseInput(input.trim());
+    switch (command) {
         case('up'):
+            console.log('1')
             up()
             break;
         case('cd'):
-            await cd(path)
+             cd(source)
             break;
         case('ls'):
             await ls()
             break;
     }
-
 }
