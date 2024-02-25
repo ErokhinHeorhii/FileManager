@@ -1,6 +1,6 @@
 export const parseInput = (str) => {
     const [command, ...rest] = str.split(' ');
-    const sources = [];
+    const path = [];
     let temp = '';
 
     for (let part of rest) {
@@ -10,22 +10,19 @@ export const parseInput = (str) => {
                 temp = part.slice(1);
             } else {
                 temp += ' ' + part.slice(0, -1);
-                sources.push(temp);
+                path.push(temp);
                 temp = '';
             }
         } else if (temp !== '') {
             temp += ' ' + part;
         } else {
-            sources.push(part);
+            path.push(part);
         }
     }
 
-    const source = sources.shift();
-    const destination = sources.shift();
+    const source = path.shift();
 
     return {
-        command,
         source,
-        destination,
     };
 };

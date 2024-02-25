@@ -9,7 +9,7 @@ const startFileManagerApp = () => {
     console.log(`You are currently in ${PathApp.getPath()}`)
 
     rl.on('close', () => {
-        console.log(`\nThank you for using Fiuple Manager, ${username}, goodbye!`)
+        console.log(`\nThank you for using File Manager, ${username}, goodbye!`)
     });
 
     rl.on('line', async (input) => {

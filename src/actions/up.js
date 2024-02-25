@@ -5,8 +5,12 @@ export const up = () => {
     const currentPath = PathApp.getPath();
     const parentDir = path.resolve(currentPath, '../');
     const rootDir = path.parse(currentPath).root;
-    console.log(rootDir)
     if (rootDir !== currentPath) {
         PathApp.setPath(parentDir);
+    } else {
+        console.log("This is root directory")
     }
+
 }
+
+
