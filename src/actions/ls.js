@@ -4,7 +4,6 @@ import {PathApp} from "../utils/index.js";
 export const ls = async () => {
     const currentPath = PathApp.getPath();
     const content = await fs.readdir(currentPath, { withFileTypes: true});
-console.log(content)
     const directories = content.filter(item => item.isDirectory())
         .sort((a,b) => a.name-b.name)
         .map(item => ({ name: item.name, type: 'directory'}));
