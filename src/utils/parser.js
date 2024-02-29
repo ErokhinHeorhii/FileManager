@@ -1,5 +1,6 @@
 import {cd, ls, parseInput, up} from "../actions/index.js";
 import {add, cat, cp, mv, rn} from "../fileOperation/index.js";
+import {osF} from "../os/os.js";
 
 export const parser = async (input) => {
     let {command, source, inputName} = parseInput(input.trim());
@@ -27,6 +28,9 @@ export const parser = async (input) => {
             break;
         case('mv'):
             await mv(source, inputName)
+            break;
+        case('os'):
+            await osF(source)
             break;
     }
 }
