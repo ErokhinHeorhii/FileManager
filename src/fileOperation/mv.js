@@ -1,10 +1,10 @@
 import path from 'node:path';
 import fs from 'node:fs';
-import {PathApp} from "../utils/index.js";
+import { rm } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
-
-
-export const cp = async (pathExist, newPath) => {
+import {PathApp} from "../utils/index.js";
+export const mv= async (pathExist, newPath)=>{
+    console.log(pathExist, newPath )
     try {
         const oldPath = path.resolve(PathApp.getPath(), pathExist);
         const fromName = path.basename(oldPath);
@@ -12,6 +12,7 @@ export const cp = async (pathExist, newPath) => {
         const readStream = fs.createReadStream(fromName);
         const writeStream = fs.createWriteStream(to);
         await pipeline(readStream, writeStream);
+        await rm(fromName);
     } catch (error) {
         console.log(error);
     }
