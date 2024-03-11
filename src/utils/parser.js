@@ -1,4 +1,4 @@
-import {cd, ls, parseInput, up} from "../actions/index.js";
+import {cd, hash, ls, parseInput, up} from "../actions/index.js";
 import {add, cat, cp, mv, rn} from "../fileOperation/index.js";
 import {osF} from "../os/os.js";
 
@@ -31,6 +31,9 @@ export const parser = async (input) => {
             break;
         case('os'):
             await osF(source)
+            break;
+        case('hash'):
+             hash(source)
             break;
     }
 }
