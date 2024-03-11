@@ -1,7 +1,6 @@
 import {EOL, cpus, userInfo, arch} from 'node:os';
-import {PathApp} from "../utils/index.js";
 
-export const osF = (osInput) => {
+export const os = (osInput) => {
     switch (osInput) {
         case('--EOL'):
             console.log(EOL)
