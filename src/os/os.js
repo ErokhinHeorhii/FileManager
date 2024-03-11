@@ -1,6 +1,6 @@
 import {EOL, cpus, userInfo, arch} from 'node:os';
 
-export const os = (osInput) => {
+export const osF = (osInput) => {
     switch (osInput) {
         case('--EOL'):
             console.log(EOL)
