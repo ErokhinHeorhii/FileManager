@@ -1,7 +1,5 @@
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
-import path from 'node:path';
-import {PathApp} from "../utils/index.js";
 
 export const hash =  (source)=>{
     try {

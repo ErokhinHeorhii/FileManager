@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node main.js",
-    "start:name": "node main.js --username=Geo"
+    "start:name": "node main.js -- --username=Geo"
   },
   "author": "",
   "license": "ISC"

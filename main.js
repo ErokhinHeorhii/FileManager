@@ -13,6 +13,10 @@ const startFileManagerApp = () => {
     });
 
     rl.on('line', async (input) => {
+        if (input.trim() === '.exit') {
+            rl.close(); 
+            return;
+        }
         await parser(input);
         console.log(`You are currently in ${PathApp.getPath()}`)
     });

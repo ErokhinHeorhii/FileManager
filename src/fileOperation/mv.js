@@ -3,8 +3,7 @@ import fs from 'node:fs';
 import { rm } from 'node:fs/promises';
 import { pipeline } from 'node:stream/promises';
 import {PathApp} from "../utils/index.js";
-export const mv= async (pathExist, newPath)=>{
-    console.log(pathExist, newPath )
+export const mv = async (pathExist, newPath)=>{
     try {
         const oldPath = path.resolve(PathApp.getPath(), pathExist);
         const fromName = path.basename(oldPath);
